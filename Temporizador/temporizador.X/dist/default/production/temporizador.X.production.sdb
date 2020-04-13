@@ -1,0 +1,444 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1824 ]
+[d frameptr 6 ]
+"20 E:\PROYECTOS 2020\Temporizador\temporizador.X/input.h
+[v _input_config input_config `(v  1 e 1 0 ]
+"27
+[v _input_pulsador_subir input_pulsador_subir `(ui  1 e 2 0 ]
+"41
+[v _input_pulsador_bajar input_pulsador_bajar `(ui  1 e 2 0 ]
+"55
+[v _input_pulsador_ok input_pulsador_ok `(ui  1 e 2 0 ]
+"70 E:\PROYECTOS 2020\Temporizador\temporizador.X/max7219.h
+[v ___max7219_write __max7219_write `(v  1 e 1 0 ]
+"90
+[v _max7219_config max7219_config `(v  1 e 1 0 ]
+"112
+[v _max7219_writeChar max7219_writeChar `(v  1 e 1 0 ]
+"122
+[v _max7219_brillo max7219_brillo `(v  1 e 1 0 ]
+"130
+[v _max7219_points max7219_points `(v  1 e 1 0 ]
+"16 E:\PROYECTOS 2020\Temporizador\temporizador.X/output.h
+[v _output_config output_config `(v  1 e 1 0 ]
+"27
+[v _output_relay output_relay `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"36 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"59
+[v _oscillator_config oscillator_config `(v  1 e 1 0 ]
+"65
+[v _timer_0_config timer_0_config `(v  1 e 1 0 ]
+"78
+[v _timer_0_enable timer_0_enable `(v  1 e 1 0 ]
+"85
+[v _timer_0_disable timer_0_disable `(v  1 e 1 0 ]
+"92
+[v _display_init display_init `(v  1 e 1 0 ]
+"115
+[v _update_eeprom update_eeprom `(v  1 e 1 0 ]
+"167
+[v _proceso_subir_bajar_tiempo proceso_subir_bajar_tiempo `(v  1 e 1 0 ]
+"185
+[v _proceso_run proceso_run `(v  1 e 1 0 ]
+"224
+[v _proceso_detenido proceso_detenido `(v  1 e 1 0 ]
+"248
+[v _myISR myISR `II(v  1 e 1 0 ]
+"11 E:\PROYECTOS 2020\Temporizador\temporizador.X/max7219.h
+[v ___digitos_1 __digitos_1 `[11]uc  1 e 11 0 ]
+"25
+[v ___digitos_2 __digitos_2 `[11]uc  1 e 11 0 ]
+[s S427 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+]
+"131 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1824.h
+[s S433 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S437 . 1 `S427 1 . 1 0 `S433 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES437  1 e 1 @3 ]
+[s S215 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374
+[s S224 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S229 . 1 `S215 1 . 1 0 `S224 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES229  1 e 1 @11 ]
+[s S73 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+]
+"444
+[u S80 . 1 `S73 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES80  1 e 1 @12 ]
+[s S90 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+]
+"494
+[u S97 . 1 `S90 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES97  1 e 1 @14 ]
+"682
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+[s S56 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+]
+"1130
+[u S63 . 1 `S56 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES63  1 e 1 @140 ]
+[s S39 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+]
+"1180
+[u S46 . 1 `S39 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES46  1 e 1 @142 ]
+[s S183 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1391
+[s S192 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S197 . 1 `S183 1 . 1 0 `S192 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES197  1 e 1 @149 ]
+[s S152 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+`uc 1 SPLLEN 1 0 :1:7 
+]
+"1641
+[s S161 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+[u S165 . 1 `S152 1 . 1 0 `S161 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES165  1 e 1 @153 ]
+[s S107 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+]
+"1967
+[u S114 . 1 `S107 1 . 1 0 ]
+[v _LATAbits LATAbits `VES114  1 e 1 @268 ]
+[s S22 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+]
+"2012
+[u S29 . 1 `S22 1 . 1 0 ]
+[v _LATCbits LATCbits `VES29  1 e 1 @270 ]
+"2860
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"2919
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"2972
+[v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
+[s S403 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2989
+[u S412 . 1 `S403 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES412  1 e 1 @405 ]
+"3034
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"24 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _k k `l  1 e 4 0 ]
+"25
+[v _minutos_set minutos_set `i  1 e 2 0 ]
+"26
+[v _segundos_set segundos_set `i  1 e 2 0 ]
+"27
+[v _minutos_temp minutos_temp `i  1 e 2 0 ]
+"28
+[v _segundos_temp segundos_temp `i  1 e 2 0 ]
+"29
+[v _last_minutos_temp last_minutos_temp `i  1 e 2 0 ]
+"30
+[v _last_segundos_temp last_segundos_temp `i  1 e 2 0 ]
+"31
+[v _proceso proceso `i  1 e 2 0 ]
+"32
+[v _flag_segundos flag_segundos `i  1 e 2 0 ]
+"33
+[v _veces_uso veces_uso `ui  1 e 2 0 ]
+"34
+[v _encendido encendido `ui  1 e 2 0 ]
+"36
+[v _main main `(v  1 e 1 0 ]
+{
+"57
+} 0
+"115
+[v _update_eeprom update_eeprom `(v  1 e 1 0 ]
+{
+"116
+[v update_eeprom@var2 var2 `i  1 a 2 15 ]
+[v update_eeprom@var1 var1 `i  1 a 2 13 ]
+"165
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 4 ]
+"19
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 6 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 1 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 3 ]
+"25
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 0 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 2 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 9 ]
+"30
+} 0
+"65 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _timer_0_config timer_0_config `(v  1 e 1 0 ]
+{
+"76
+} 0
+"167
+[v _proceso_subir_bajar_tiempo proceso_subir_bajar_tiempo `(v  1 e 1 0 ]
+{
+"183
+} 0
+"27 E:\PROYECTOS 2020\Temporizador\temporizador.X/input.h
+[v _input_pulsador_subir input_pulsador_subir `(ui  1 e 2 0 ]
+{
+"28
+[v input_pulsador_subir@contador contador `i  1 s 2 contador ]
+"39
+} 0
+"41
+[v _input_pulsador_bajar input_pulsador_bajar `(ui  1 e 2 0 ]
+{
+"42
+[v input_pulsador_bajar@contador contador `i  1 s 2 contador ]
+"53
+} 0
+"185 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _proceso_run proceso_run `(v  1 e 1 0 ]
+{
+"222
+} 0
+"85
+[v _timer_0_disable timer_0_disable `(v  1 e 1 0 ]
+{
+"90
+} 0
+"224
+[v _proceso_detenido proceso_detenido `(v  1 e 1 0 ]
+{
+"246
+} 0
+"78
+[v _timer_0_enable timer_0_enable `(v  1 e 1 0 ]
+{
+"83
+} 0
+"55 E:\PROYECTOS 2020\Temporizador\temporizador.X/input.h
+[v _input_pulsador_ok input_pulsador_ok `(ui  1 e 2 0 ]
+{
+"56
+[v input_pulsador_ok@contador contador `i  1 s 2 contador ]
+"67
+} 0
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 1 ]
+[v eeprom_write@addr addr `uc  1 a 1 4 ]
+"9
+} 0
+"16 E:\PROYECTOS 2020\Temporizador\temporizador.X/output.h
+[v _output_config output_config `(v  1 e 1 0 ]
+{
+"21
+} 0
+"59 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _oscillator_config oscillator_config `(v  1 e 1 0 ]
+{
+"63
+} 0
+"90 E:\PROYECTOS 2020\Temporizador\temporizador.X/max7219.h
+[v _max7219_config max7219_config `(v  1 e 1 0 ]
+{
+"110
+} 0
+"122
+[v _max7219_brillo max7219_brillo `(v  1 e 1 0 ]
+{
+[v max7219_brillo@data data `ui  1 p 2 0 ]
+"128
+} 0
+"20 E:\PROYECTOS 2020\Temporizador\temporizador.X/input.h
+[v _input_config input_config `(v  1 e 1 0 ]
+{
+"25
+} 0
+"92 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _display_init display_init `(v  1 e 1 0 ]
+{
+"93
+[v display_init@j j `i  1 a 2 12 ]
+[v display_init@i i `i  1 a 2 10 ]
+"113
+} 0
+"27 E:\PROYECTOS 2020\Temporizador\temporizador.X/output.h
+[v _output_relay output_relay `(v  1 e 1 0 ]
+{
+[v output_relay@d d `i  1 p 2 1 ]
+"29
+} 0
+"112 E:\PROYECTOS 2020\Temporizador\temporizador.X/max7219.h
+[v _max7219_writeChar max7219_writeChar `(v  1 e 1 0 ]
+{
+[v max7219_writeChar@pos pos `ui  1 p 2 3 ]
+[v max7219_writeChar@data data `ui  1 p 2 5 ]
+"120
+} 0
+"70
+[v ___max7219_write __max7219_write `(v  1 e 1 0 ]
+{
+"71
+[v ___max7219_write@i i `ui  1 a 2 11 ]
+"72
+[v ___max7219_write@dataSend dataSend `ui  1 a 2 9 ]
+"70
+[v ___max7219_write@address address `ui  1 p 2 1 ]
+[v ___max7219_write@data data `ui  1 p 2 3 ]
+"88
+} 0
+"130
+[v _max7219_points max7219_points `(v  1 e 1 0 ]
+{
+"131
+[v max7219_points@i i `ui  1 a 2 6 ]
+"130
+[v max7219_points@points points `ui  1 p 2 1 ]
+[v max7219_points@nivel nivel `ui  1 p 2 3 ]
+"153
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 7 ]
+[v ___awmod@counter counter `uc  1 a 1 6 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 1 ]
+[v ___awmod@dividend dividend `i  1 p 2 3 ]
+"34
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 8 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 7 ]
+[v ___awdiv@counter counter `uc  1 a 1 6 ]
+"5
+[v ___awdiv@divisor divisor `i  1 p 2 1 ]
+[v ___awdiv@dividend dividend `i  1 p 2 3 ]
+"41
+} 0
+"248 E:\PROYECTOS 2020\Temporizador\temporizador.X\main.c
+[v _myISR myISR `II(v  1 e 1 0 ]
+{
+"249
+[v myISR@f f `i  1 s 2 f ]
+"261
+} 0
